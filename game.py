@@ -4,6 +4,7 @@ class Game:
     def __init__(self):
         self.board = [ [0]*8 for i in range(8)]
         self.oppBoard = [ ['x']*8 for i in range(8)]
+        self.hit = 16
 
     def shipRandom(self):
         self.shipLenghts = [5, 4, 3, 2, 2]

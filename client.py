@@ -6,7 +6,7 @@ import game
 player = game.Game()
 player.shipRandom()
 player.printBoard()
-hit = 15
+hit = 0
 stop = False
 
 def listen_msg(s):
@@ -31,7 +31,7 @@ def listen_msg(s):
         else:
             if "Hit!" in msg:
                 hit = hit + 1
-                if hit == 16:
+                if hit == player.hit:
                     os.system('cls||clear')
                     print("You have won!!!")
                     stop = True
